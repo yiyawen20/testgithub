@@ -1,0 +1,10 @@
+<!--pages/adapter.wxml-->
+<template name="statusBarTop">
+  <view class="statusBarBg" style="height:{{height}}rpx"></view>
+</template>
+
+<template name="adapterIpxBottom">
+  <block wx:if="{{isIphoneX}}">
+    <view class="ipx_bottom"></view>
+  </block>
+</template>

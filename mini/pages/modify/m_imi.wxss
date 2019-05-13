@@ -1,0 +1,87 @@
+/*直播间调整*/
+@import "stylesheet.wxss";
+#player{width: 750rpx; height: 562.5rpx; overflow: hidden; vertical-align: top;}
+.cover_avatar_wrap{width: 750rpx; height: 562.5rpx; overflow: hidden;}
+.cover_avatar{width: 750rpx; height: 750rpx; vertical-align: top;}
+
+.host_emcee_induce{height: 116rpx; background-color: #fff;}
+.host_emcee_induce .emcee_img{padding: 18rpx 20rpx;}
+.host_emcee_induce .emcee_img image{width: 80rpx; height: 80rpx; border-radius: 100%; vertical-align: top;}
+.host_emcee_induce view.flex:nth-child(2){padding: 16rpx; line-height: 42rpx;}
+.emcee_hostname{font-size: 31rpx;}
+.emcee_hostid{font-size: 28rpx;}
+
+.attention{width: 160rpx; height: 42rpx; line-height: 42rpx; padding: 11rpx 0; border-radius: 64rpx; margin: 26rpx 20rpx 0 0; text-align: center; font-size: 30rpx; color: #fff; background-color: rgb(50,211,114);}
+.attention image{width: 42rpx; height: 42rpx; vertical-align: top;}
+.attentioned{width: 160rpx; height: 42rpx; line-height: 42rpx; padding: 11rpx 0; border-radius: 64rpx; margin: 26rpx 20rpx 0 0; text-align: center; font-size: 30rpx; color: rgba(0,113,48,.7); background-color: rgba(50,211,114,.2);}
+
+.live_chat_scroll{height: 320rpx; color: #585858; background-color: rgba(244,244,249);}
+.live_chat{padding: 22rpx; line-height: 42rpx;}
+.chat_name{color: rgb(252,90,88);}
+.chat_ele{}
+.chat_ele_gift{color: rgb(177,93,255);}
+.gift_img{width: 42rpx; height: 42rpx; vertical-align: top;}
+
+.chat_gift_img, .chat_face_img{width: 42rpx; height: 42rpx;}
+.chat_vip_face_img{width: 100rpx; height: 100rpx;}
+
+.live_footer{position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; padding: 22rpx 24rpx; height: 84rpx; white-space: nowrap;}
+.btn_live_img{width: 84rpx; height: 84rpx; vertical-align: top; margin: 0 8rpx;}
+
+.share_btn_enter{position: relative; z-index: 1; display: inline-block; width: 100rpx; height: 84rpx; vertical-align: top;}
+.share_button{position: absolute; top: 0; left: 0; z-index: 1; width: 100rpx; height: 84rpx; background-color: transparent;}
+
+.btn_open_app{position: absolute; bottom: 22rpx; right: 32rpx; z-index: 10; width: 84rpx; height: 84rpx;}
+.btn_open_app_btn{position: absolute; bottom: 22rpx; right: 32rpx; z-index: 11; width: 84rpx; height: 84rpx; background-color: transparent;}
+.btn_open_app_guide{position: absolute; bottom: 98rpx; right: 84rpx; z-index: 10; width: 370rpx; height: 72rpx;}
+.gift_send_enter{position: absolute; bottom: 164rpx; right: 0; z-index: 10; width: 148rpx; text-align: center;}
+.gift_send_img image{width: 84rpx; height: 84rpx; vertical-align: top;}
+.gift_send_curr{font-size: 21rpx; color: rgb(252,69,169); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.game_pop{position: absolute; bottom: 0; left: 0; z-index: 2; width: 100%; background-color: #fff;}
+.game_pop_title{padding: 22rpx; font-size: 24rpx; color: rgb(88,88,88);}
+.game_pop_list{padding: 0 0 0 19rpx;}
+.game_pop_item{width: 178rpx; padding: 0 0 42rpx; text-align: center;}
+.game_pop_item_img .game_enter_img{width: 142rpx; height: 142rpx; vertical-align: top;}
+.game_pop_item_name{padding: 10rpx 0 0; font-size: 24rpx; color: rgb(88,88,88); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.live_system{padding: 0 0 12rpx; color: #a6a6a6; line-height: 42rpx;}
+
+/* .page_live{position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;} */
+
+.footer_send_wrap{position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 22rpx; height: 84rpx; background-color: #f7f7f7;}
+.input_send{padding: 10rpx 20rpx; height: 64rpx; line-height: 64rpx; border-radius: 10rpx; border: none; background-color: #fff; vertical-align: top;}
+.send_btn{width: 160rpx; height: 82rpx; line-height: 84rpx; margin-left: 22rpx; font-size: 32rpx; border-radius: 10rpx; color:#fff; background-color:#179B16; vertical-align: top;}
+
+.repeat_content{position: absolute; top: 0; left: 0; z-index: 1000; width: 100%; background-color: #fff;}
+.repeat_host_name{padding: 0 0 0 84rpx; line-height: 86rpx; font-size: 38rpx; text-align: left;}
+.repeat_host_cover{width: 100%; height: 562.5rpx;}
+
+.repeat_shot_canvas{position: absolute; top: 0; left: 0; z-index: 2; width: 750rpx; height: 750rpx;}
+
+.gift_bg_panel {position: absolute; bottom: 0; left: 0; z-index: 1000; width: 324rpx; height: 60rpx; padding: 10rpx; opacity: 0; transform: translate(0, 0); transform-origin: 50% 50%;}
+.gift_bg {position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+.avatar {width: 60rpx; height: 60rpx; border-radius: 100%;}
+.gift_bg_panel .gift {width: 60rpx; height: 60rpx;}
+.gift_bg_panel .txt {padding: 0 10rpx; font-size: 20rpx; color: #fff; width: 55%;}
+.gift_bg_panel .txt .sender {color: #fc0;}
+.gift_bg_panel .txt .p1,.gift_bg_panel .txt .p2{line-height: 30rpx; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.emcee_pk{position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%;}
+.pk_emcee_link{position: absolute; top: 36rpx; right: 130rpx; z-index: 1; width: 224rpx; height: 80rpx; line-height: 80rpx; border-radius: 80rpx; text-align: center; font-size: 36rpx; color: #fff; background-color: rgba(0, 0, 0, .5);}
+.emcee_pk_load{position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; height: 36rpx; line-height: 36rpx; padding: 0 12rpx 0 0; font-size: 22rpx; text-align: right; color: #fff; background-color: #fc45a9;}
+.emcee_pk_my_num{position: absolute; top: 0; left: 0; z-index: 1; height: 36rpx; line-height: 36rpx; padding: 0 0 0 12rpx; text-align: left; background-color: #477ef2;}
+.emcee_pk_arrow{position: absolute; top: 0; right: 0; z-index: -1; width: 20rpx; height: 36rpx;}
+.emcee_pk_time{position: absolute; bottom: 36rpx; left: 50%; z-index: 1; width: 210rpx; height: 48rpx; margin: 0 0 0 -105rpx;}
+.emcee_pk_time_bg{position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+.emcee_pk_time_left{padding: 0 0 0 80rpx; line-height: 48rpx; font-size: 38rpx; color: #ffe65b; font-family: "digital" !important;}
+.pk_result{position: absolute; bottom: 46rpx; right: 10rpx; z-index: 1; width: 72rpx; height: 72rpx;}
+
+.pk_content_main{position: relative; z-index: 1; width: 564rpx; height: 450rpx;}
+.btn_pk_close{position: absolute; top: 76rpx; right: 14rpx; z-index: 1; width: 60rpx; height: 60rpx;}
+.pk_content_bg{position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+.pk_emcee_img_left,
+.pk_emcee_img_right{position: absolute; top: 200rpx; z-index: 1; width: 150rpx; height: 150rpx; border-radius: 100%;}
+.pk_emcee_img_left{left: 64rpx;}
+.pk_emcee_img_right{right: 64rpx;}
+.pk_emcee_punishment{position: absolute; bottom: 36rpx; left: 0; z-index: 1; width: 100%; text-align: center; font-size: 26rpx; color: #c1994f;}

@@ -1,0 +1,60 @@
+
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...title}}"></template>
+
+<view class='content'>
+  
+  <image class='background_page' mode='aspectFill' src='{{cdnfile}}/images/share_page_bg.png?v=1.1'></image>
+  <image class='background_content' mode='aspectFill' src='{{cdnfile}}/images/share_content_bg.png'></image>
+  <!-- <image class='background' mode='aspectFill' src='../images/share_page_bg.png'></image> -->
+
+  <view class='content_info'>
+    
+    <scroll-view scroll-y class='share_list_container'>
+      <block wx:for="{{listData}}">
+        <view class='share_item'>
+          <view class='share_item_content'>
+            <view class='left'>
+              <image class='avatar' mode='aspectFill' src='{{item.recomAvatar}}'></image>
+            <text class='userName'>{{item.recomName}}</text>   
+            <text class='reward'>¥{{item.reward}}</text>
+            </view>
+            
+            <text class='time'>{{item.addTime}}</text>
+          </view>
+          <view class='line'></view>
+        </view>        
+      </block> 
+    </scroll-view>
+
+    <view class='rewards'>
+      <view class='withdraw'>
+        <view>
+          <text class='desc'>我的现金红包</text>
+          <text class='amount'>¥{{curAmount}}</text>
+        </view>
+        <button bindtap='withdraw'>提现</button>
+      </view>
+      <view class='lottery'>
+        <view>
+          <text class='desc'>我的抽奖次数</text>
+          <text class='amount'>{{lotteryNum}}</text>
+        </view>
+        <button bindtap='lottery'>抽奖</button>
+      </view>
+    </view>
+
+    <view class='share_buttons'>
+      <button open-type='share'>分享微信群</button>
+      <button bindtap='navToPopularize'>保存推广图片</button>
+    </view> 
+  </view>
+  
+</view>
+
+<my-component prop-a="{{dialDisplay}}" wx:if="{{dialDisplay}}" bindclose="lottery">
+    <view name="dial"></view>
+</my-component>

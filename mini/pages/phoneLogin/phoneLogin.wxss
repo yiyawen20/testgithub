@@ -1,0 +1,73 @@
+/* pages/phoneLogin/phoneLogin.wxss */
+
+@import "../../wxParse/wxParse.wxss";
+
+.logoImage{
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 290rpx;
+  margin-top: 100rpx;
+  margin-bottom: 70rpx;
+}
+
+.inputView{
+  width:750rpx;
+  font-size: 30rpx;
+  position:relative;
+}
+ .inputView input{
+  border-radius: 98rpx;
+  width:592rpx;
+  padding: 0 54rpx;
+  margin-left: 25rpx;
+  height: 90rpx;
+  /* border: solid 1rpx gray; */
+  color: #fff;
+  background-color: rgba(73,69,112, .5);
+  align-items: center;/** 垂直居中*/
+  margin-bottom: 50rpx;
+}
+
+.inputView .smsBtn{
+  border-radius: 98rpx;
+  width:245rpx;
+  height: 90rpx;
+  background-color: rgba(255, 255, 255, .2);
+  font-size: 30rpx;
+  position: absolute;
+  right: 25rpx;
+  bottom: 50rpx;
+  color: rgb(255, 255, 255);
+  align-items: center;/** 垂直居中*/
+  z-index: 2;
+}
+.inputView .smsBtndisabled{background-color: rgba(73,69,112, .5);}
+
+.phoneloginBtnView{
+  width:750rpx;
+}
+
+.phoneloginBtnView button{
+  border-radius: 98rpx;
+  width:700rpx;
+  height: 90rpx;
+  align-items: center;
+  background-color: rgba(255,255,255,.3);
+  color: rgb(38, 91, 166)
+}
+
+.textArea{
+  height: 60rpx;
+  color:rgb(255, 255, 255);
+  width: 750rpx;
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  font-size: 21rpx;
+  text-align: center;
+}
+.textArea view{
+  width: 750rpx；
+}
+
+

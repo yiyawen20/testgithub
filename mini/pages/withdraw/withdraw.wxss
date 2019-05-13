@@ -1,0 +1,72 @@
+/* pages/withdraw/withdraw.wxss */
+.top_container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 440rpx;
+}
+
+.top_bg {
+  width: 100%;
+  height: 100%;
+}
+
+.top_content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100;
+  height: 100;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.top_content .avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 44rpx auto 0 auto;
+  border-radius: 90rpx;
+}
+
+.top_content .desc {
+  color: white;
+  margin: 32rpx auto 0 auto;
+  font-size: 24rpx;
+}
+
+.top_content .balance {
+  color: white;
+  margin: 8rpx auto 0 auto;
+  font-size: 90rpx;
+}
+
+.start_app {
+  margin: 92rpx auto 0 auto;
+  width: 670rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(140, 126, 252);
+  border-radius: 44rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
+.guide {
+  position: absolute;
+  bottom: 64rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 648rpx;
+  font-size: 24rpx;
+  line-height: 38rpx;
+}
+
+.guide .copy_link {
+  color: blue;
+}

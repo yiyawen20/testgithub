@@ -1,0 +1,24 @@
+<!--phoneLogin.wxml-->
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...user}}"></template>
+
+<view style='width:750rpx;height:{{windowHigh}}rpx;background-image: url({{cdnfile}}/images/login_bg.png); background-size:100% 100%; -moz-background-size:100% 100%; postion:relative;'>
+  <image src="../images/loginImg.png"  mode='aspectFit'  class='logoImage'></image>
+
+  <view class='inputView'>
+      <input type='number' placeholder='请输入手机号' placeholder-style='color: rgb(255, 255, 255);' bindinput='inputPhoneOver' maxlength='11'></input>
+      <input placeholder='请输入验证码' type='text' maxlength='6' confirm-type='done' bindinput='inputsmsCode' placeholder-style='color: rgb(255, 255, 255);'> 
+      </input>
+       <button type='default' bindtap='sendSmsCode' hover-class="none" class='smsBtn {{smsBtndisabled}}' id='smsBtnId'>{{sendSmsText}}</button>
+  </view>
+  <view class='phoneloginBtnView'>
+    <button type='default' bindtap='phoneLogin'>登录</button>
+  </view>
+  <view class='textArea'>
+    <view>若您的艾米账号未绑定手机号,</view>
+    <view>请先前往艾米直播APP绑定后才可登录小程序</view>
+  </view>
+</view>

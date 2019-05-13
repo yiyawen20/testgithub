@@ -1,0 +1,25 @@
+/* login.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+.logoImage{
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 290rpx;
+  margin-top: 150rpx;
+  margin-bottom: 100rpx;
+}
+
+.loginBtnView{
+  width:750rpx;
+}
+.loginBtnView button{
+  border-radius: 98rpx;
+  width:670rpx;
+  height: 90rpx;
+  margin-bottom: 60rpx;
+  font-size: 30rpx;
+  align-items: center;/** 垂直居中*/
+  justify-content: center; /** flex 属性， 水平居中**/
+  background-color: rgba(255, 255, 255, .3);
+  color: rgb(38, 91, 166);
+}

@@ -1,0 +1,71 @@
+/* pages/phoneBind/phoneBind.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+
+.logoImage{
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 290rpx;
+  margin-top: 100rpx;
+  margin-bottom: 70rpx;
+}
+
+.inputView{
+  width:750rpx;
+  font-size: 30rpx;
+  position:relative;
+}
+ .inputView input{
+  border-radius: 98rpx;
+  width:592rpx;
+  padding: 0 54rpx;
+  margin-left: 25rpx;
+  height: 90rpx;
+  border: solid 1rpx gray;
+  color: #fff;
+  background-color: rgb(144, 146, 172);
+  align-items: center;/** 垂直居中*/
+  margin-bottom: 50rpx;
+}
+
+.inputView .smsBtn{
+  float: left;
+  border-radius: 98rpx;
+  width:245rpx;
+  height: 90rpx;
+  background-color: rgb(152, 162, 191);
+  font-size: 30rpx;
+  position: absolute;
+  right: 25rpx;
+  bottom: 54rpx;
+  color: rgb(255, 255, 255);
+  align-items: center;/** 垂直居中*/
+  z-index: 2;
+}
+
+.phoneloginBtnView{
+  width:750rpx;
+}
+
+.phoneloginBtnView button{
+  border-radius: 98rpx;
+  width:700rpx;
+  height: 90rpx;
+  align-items: center;
+  background-color: rgb(239, 240, 243);
+  color: rgb(38, 91, 166)
+}
+
+.textArea{
+  height: 60rpx;
+  color:rgb(255, 255, 255);
+  width: 750rpx;
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  font-size: 21rpx;
+  text-align: center;
+}
+.textArea view{
+  width: 750rpx；
+}

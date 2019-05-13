@@ -1,0 +1,35 @@
+<!--pages/withdraw/withdraw.wxml-->
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...title}}"></template>
+
+<view class='top_container'>
+  <image class='top_bg' mode='aspectFill' src='{{cdnfile}}/images/top_horizontal_bg.png'></image>
+  <view class='top_content'>
+    <image class='avatar' src='{{avatarUrl}}'></image>
+    <text class='desc'>我的余额（元）</text>
+    <text class='balance'>{{balance}}</text>
+  </view> 
+</view>
+
+<button bindtap='startApp' class='start_app'>启动APP，完成提现</button>
+
+<view class='guide'>
+  <text>如何下载APP？\n1. 通过【我的】-【启动/下载app】-进入客服页面回复数字1\n2. 在其他浏览器中输入地址：\n{{downloadLink}}\n</text>
+  <text bindtap='copyLink' class='copy_link'>复制链接</text>
+</view>
+
+
+<cover-view class="content_panel display-box" wx:if="{{openAppPanel}}">
+  <cover-view class="mask"></cover-view>
+  <cover-view class="content_main">
+    <cover-view class="header_close"><cover-image class="close_btn" src="../images/close.png" data-hideid="openAppPanel" bindtap="close"></cover-image></cover-view>
+    <cover-view class="content_massage">若你尚未安装艾米直播APP，请点击“进入下载”,并回复数字“1”</cover-view>
+    <cover-view class="content_sub display-box">
+      <cover-view class="flex lbtn"><button class="p_btn" plain="false" hover-class="none" open-type="contact">进入下载</button></cover-view>
+      <cover-view class="flex rbtn"><button wx:if="{{isOpenApp}}" class="p_btn" open-type="launchApp" app-parameter="wechat" binderror="launchAppError">启动APP</button><button wx:else class="p_btn" open-type="contact">启动APP</button></cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>

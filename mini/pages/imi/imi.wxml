@@ -1,0 +1,144 @@
+<import src="../../wxParse/wxParse.wxml" />
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<view class="page_container" bindtap="clickPage" style="height: {{pageHeight}}rpx;">
+<!-- yiyawen -->
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...user}}"></template>
+<view>
+  <live-player id="player" src="{{liveSrc}}" mode="live" min-cache="0.2"  max-cache="0.8" object-fit="fillCrop" bindstatechange="statechange" bindfullscreenchange="viewchange" binderror="error" bindnetstatus="netstatus" autoplay>
+      <cover-view class="cover_avatar_wrap" wx:if="{{playerdisplay}}">
+        <cover-image class="cover_avatar" src="{{smallhostavatar}}"></cover-image>
+      </cover-view>
+
+      <!--  礼物效果 start -->
+      <cover-view wx-if="{{sendGift}}" class='gift_bg_panel display-box' animation="{{giftAnimation}}">
+        <cover-image src='../images/gift_bg.png' class='gift_bg'></cover-image>
+        <cover-image src='{{sender.avatar}}' class='avatar'></cover-image>
+        <cover-view class='txt flex'>
+          <cover-view class='sender p1'>{{sender.name}}</cover-view>
+          <cover-view class="p2">送出{{sender.giftNum}}个{{sender.giftName}}</cover-view>
+        </cover-view>
+        <cover-image src='{{imgPrefix}}{{sender.giftSn}}.png' class='gift'></cover-image>
+      </cover-view>
+      <!--  礼物效果 end -->
+
+      <!-- pk -->
+      <cover-view class="emcee_pk" wx:if="{{emceePk}}">
+        <cover-view class="pk_emcee_link" data-tid="{{pkEmceeId}}" bindtap="imiReqRoom">去Ta房间</cover-view>
+        <cover-view class="emcee_pk_load">{{otherScore}}<cover-view class="emcee_pk_my_num" style="width:{{pkPro}}%;">{{score}}<!--<cover-image src="../images/emcee_pk_arrow.jpg" class="emcee_pk_arrow"></cover-image>--></cover-view></cover-view>
+        <cover-view class="emcee_pk_time">
+          <cover-image src="../images/emcee_pk_time_bg.png" class="emcee_pk_time_bg"></cover-image>
+          <cover-view class="emcee_pk_time_left">{{leftTime}}</cover-view>
+        </cover-view>
+        <cover-image class="pk_result" src="../images/pk_{{pkResult}}_icon.png" wx:if="{{pkResult}}"></cover-image>
+      </cover-view>
+
+  </live-player>
+</view>
+
+<view class="host_emcee_induce display-box">
+  <view class="emcee_img"><image mode="widthFix" src="{{hostavatar}}"></image></view>
+  <view class="flex">
+    <view class="emcee_hostname">{{hostName}}</view>
+    <view class="emcee_hostid">id {{hostNo}}</view>
+  </view>
+  <view><view class="{{attentionClass}}" bindtap="setAttention"><image mode="aspectFill" src="../images/attention_love.png" wx:if="{{attention != '已关注'}}"></image>{{attention}}</view></view>
+</view>
+
+<scroll-view scroll-y scroll-top="{{scrollTop}}" class="live_chat_scroll" style="height:{{chatHeight}}rpx;">
+  <view class="live_chat">
+    <!-- <view><text class="chat_name">用户名用户名</text>：<text class="chat_ele">不卖奶昔你举着干嘛</text></view>
+    <view><text class="chat_name">用户名用户名</text>：<text class="chat_ele">不卖奶昔你举着干嘛不卖奶昔你举着干嘛不卖奶昔你举着干嘛</text></view>
+    <view><text class="chat_name">用户名用户名</text>：<text class="chat_ele_gift">送出礼物</text><image mode="aspectFill" src="//cdnfile3.happyia.com/www/ivp/v4/images/gift_min/1110.png" class="gift_img"></image><text>x1</text></view> -->
+    <view class='live_system'>直播我的热情，熔化你的孤单，真羡慕你来到了艾米直播。在愉快的观赏直播的同时，要记得遵守国家相关法律法规，抵制低俗、色情内容，共建绿色直播平台哦</view>
+    <!-- <template is="wxParse" data="{{wxParseData:str.nodes}}" /> -->
+    <block wx:for="{{chatArray}}">
+      <view>
+        <text class="chat_name" wx:if="{{item.name}}">{{item.name}}</text>
+        <text wx:if="{{item.msg}}">{{item.msg}}</text>
+        <image mode="aspectFill" wx:if="{{item.src}}" src="{{item.src}}" class="chat_gift_img"></image>
+        <block wx:for="{{item.faceList}}">
+          <image mode="aspectFit" wx:if="{{item.src}}" src="{{item.src}}" class="chat_{{item.type}}_img"></image>
+        </block>
+        <text class="chat_ele_gift" wx:if="{{item.num}}">{{item.num}}</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+
+<view class="live_footer" wx:if="{{footerDisplay}}">
+  <image mode="aspectFill" class="btn_live_img" src="../images/btn_chat.png" bindtap="toChat"></image>
+  <image mode="aspectFill" class="btn_live_img" src="../images/btn_game.png" bindtap="openGamePanel" wx:if="{{gameEnter}}"></image>
+  <view class="share_btn_enter"><image mode="aspectFill" class="btn_live_img" src="../images/btn_share.png"></image><button class="share_button" open-type="share"></button></view>
+  <!-- <button wx:if="{{isOpenApp}}" class="btn_open_app_btn" open-type="launchApp" app-parameter="wechat" binderror="launchAppError"></button>
+  <button wx:else class="btn_open_app_btn" open-type="contact"></button> -->
+  <image mode="aspectFill" class="btn_open_app" src="../images/down.png" bindtap="openAppChoose" wx:if="{{audit}}"></image>
+</view>
+<image mode="aspectFill" class="btn_open_app_guide" src="../images/guide_open_app.png" wx:if="{{openAppGuide && footerDisplay && audit}}"></image>
+<view class="footer_send_wrap display-box" wx:if="{{sendChatDisplay}}">
+  <view class="flex"><input type="text" confirm-type="send" confirm-hold="true" value="{{msg}}" focus="{{chatFocus}}" class="input_send" bindblur="sendBlur" bindinput="sendMsg" bindconfirm="sendChat"></input></view>
+  <!-- <view><button class="send_btn" bindtap="sendChat">发送</button></view> -->
+</view>
+
+<view class="gift_send_enter" catchtap="sendGiftEnter" wx:if="{{audit}}">
+  <view class="gift_send_img"><image mode="aspectFill" src="../images/2531.png"></image></view>
+  <view class="gift_send_curr">40金豆</view>
+</view>
+
+<!-- 互动游戏 -->
+<cover-view class="common_panel" wx:if="{{panelGame}}">
+  <cover-view class="mask" style="z-index:1" data-hideid="panelGame" bindtap="close"></cover-view>
+  <cover-view class="game_pop">
+    <cover-view class="game_pop_title">互动游戏</cover-view>
+    <cover-view class="game_pop_list clear">
+      <block wx:for="{{gamelist}}">
+        <cover-view class="game_pop_item left">
+          <cover-view class="game_pop_item_img"><cover-image class="game_enter_img" data-url="{{item.linkurl}}" data-title="{{item.title}}" data-id="{{item.id}}" data-desc="{{item.bannerDesc}}" data-type="{{item.type}}" data-id="{{index}}" src="{{item.bannerImgUrl}}" bindtap="toActivity"></cover-image></cover-view>
+          <cover-view class="game_pop_item_name">{{item.title}}</cover-view>
+        </cover-view>
+      </block>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<cover-view class="content_panel display-box" wx:if="{{openAppPanel}}">
+  <cover-view class="mask"></cover-view>
+  <cover-view class="content_main">
+    <cover-view class="header_close"><cover-image class="close_btn" src="../images/close.png" data-hideid="openAppPanel" bindtap="close"></cover-image></cover-view>
+    <cover-view class="content_title">提示</cover-view>
+    <cover-view class="content_massage">若你尚未安装艾米直播APP，请点击“进入下载”,并回复数字“1”</cover-view>
+    <cover-view class="content_sub display-box">
+      <cover-view class="flex lbtn"><button class="p_btn" plain="false" hover-class="none" open-type="contact" show-message-card="true" send-message-path="pages/imi/imi?hostId={{hostNo}}"  send-message-img="https://cdnfile.imifun.com/www/ivp/imi_mini/images/download_app.png">进入下载</button></cover-view>
+      <cover-view class="flex rbtn"><button wx:if="{{isOpenApp}}" class="p_btn" open-type="launchApp" app-parameter="wechat" binderror="launchAppError" bindlaunchapp="launchapp">启动APP</button><button wx:else class="p_btn" open-type="contact" show-message-card="true" send-message-path="pages/imi/imi?hostId={{hostNo}}" send-message-img="https://cdnfile.imifun.com/www/ivp/imi_mini/images/download_app.png">启动APP</button></cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<!-- 转发 -->
+<!-- <cover-view class="repeat_content" style="top:{{judge.height}}rpx" wx:if="{{repeatDisplay}}">
+  <cover-view class="page_title">
+    <cover-view class="user_avatar">
+      <cover-image src="{{hostavatar}}" class="avatar_img"></cover-image>
+    </cover-view>
+    <cover-view class="repeat_host_name">{{hostName}}</cover-view>
+  </cover-view>
+  <cover-image class="repeat_host_cover" src="{{smallhostavatar}}"></cover-image>
+</cover-view> -->
+
+<!-- canvas 截图 -->
+<canvas canvas-id="repeatShotCanvas" class="repeat_shot_canvas {{repeatDisplay}}" style="top:{{iPhoneTop}}rpx"></canvas>
+
+<!-- pk result -->
+<cover-view class="common_panel display-box" wx:if="{{pkResultDispay}}">
+  <cover-view class="mask"></cover-view>
+  <cover-view class="pk_content_main">
+    <cover-image class="pk_content_bg" src="{{cdnfile}}/images/pop_{{pkResultMy}}.png"></cover-image>
+    <cover-image class="btn_pk_close" src="../images/btn_pk_normal.png" data-hideid="pkResultDispay" bindtap="close"></cover-image>
+    <cover-image class="pk_emcee_img_left" src="{{hostavatar}}"></cover-image>
+    <cover-image class="pk_emcee_img_right" src="{{otherAvatar}}"></cover-image>
+    <cover-view class="pk_emcee_punishment">胜利一方可以向失败方提出一个惩罚哦~</cover-view>
+  </cover-view>
+</cover-view>
+</view>

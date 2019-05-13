@@ -1,0 +1,38 @@
+/*调整*/
+page{background-color: #8b09c1 !important;}
+
+.midlle{width: 100%; padding: 130rpx 0 0; background: url(https://etpstatic.imifun.com/etp/miniser/miniimg/lottery/share_page_bg.jpg) no-repeat scroll 0 0 transparent; background-size: 100%;}
+
+.share_list{position: relative; z-index: 1; width: 671rpx; height: 750rpx; padding: 182rpx 0 0; margin: 0 auto; background: url(https://etpstatic.imifun.com/etp/miniser/miniimg/lottery/share_list_bg1.png) no-repeat scroll 0 0 transparent; background-size: 100%;}
+
+.share_notice{padding: 12rpx 0; height: 32rpx; text-align: center;}
+.share_notice text{display: inline-block; height: 22rpx; padding: 5rpx 16rpx; line-height: 22rpx; border-radius: 32rpx; font-size: 20rpx; color: #fff; background-color: #960def; vertical-align: top;}
+
+.share_content{padding: 0 72rpx;}
+.share_line{padding: 16rpx 0; height: 42rpx; line-height: 42rpx; font-size: 28rpx; border-bottom: 1rpx solid #f6f6f6;}
+.share_line view{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.share_line view:nth-child(1) .avatar{width: 42rpx; height: 42rpx; border-radius: 100%; vertical-align: top;}
+.share_line view:nth-child(2){margin: 0 10rpx;}
+.money_num{width: 120rpx; color: #960def;}
+.s_time{width: 110rpx; color: #6C6C6C; font-size: 22rpx;}
+
+.my_tx{padding: 36rpx 72rpx 0;}
+.red_package_icon{width: 43rpx; height: 53rpx; margin: 0 12rpx 0 0; vertical-align: top;}
+.dial_icon{width: 55rpx; height: 55rpx; vertical-align: top;}
+.my_tx view:nth-child(2){padding: 0 12rpx; line-height: 54rpx; font-size: 28rpx; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.tixian_btn,.dial_enter_btn{width: 180rpx; height: 54rpx; line-height: 54rpx; border-radius: 54rpx; font-size: 26rpx; text-align: center; color: #fff; vertical-align: top;}
+.tixian_btn{background-color: #fd3f3f;}
+.dial_enter_btn{background-color: #cd70ff;}
+
+.share_sub{text-align: center; padding: 5rpx 32rpx 0;}
+.share_btn{width: 294rpx; height: 78rpx; border: none !important; background: url(https://etpstatic.imifun.com/etp/miniser/miniimg/share_btn.png) no-repeat scroll 0 0 transparent; background-size: 100%; vertical-align: top;}
+.save_btn{width: 294rpx; height: 78rpx; border: none !important; background: url(https://etpstatic.imifun.com/etp/miniser/miniimg/save_btn.png) no-repeat scroll 0 0 transparent; background-size: 100%; vertical-align: top;}
+
+.mask{background-color: rgba(0,0,0,.7)}
+
+.dial_panel{position: relative; z-index: 1; width: 635rpx; height: 635rpx; margin: -120rpx 0 0;}
+.dial_bg{position: absolute; top: 0; left: 0; z-index: -1; width: 635rpx; height: 635rpx; background: url(https://etpstatic.imifun.com/etp/miniser/miniimg/lottery/dial_main_bg.png) no-repeat scroll 0 0 transparent; background-size: 100%;}
+.dial_start{position: absolute; top: 50%; left: 50%; z-index: 1; width: 301rpx; height: 301rpx; margin: -150rpx 0 0 -150rpx;}
+.dial_start image{width: 301rpx; height: 301rpx; vertical-align: top;}
+.dial_start.disabled{pointer-events: none;}
+.dial_times{position: absolute; bottom: -120rpx; left: 0; z-index: 1; width: 100%; text-align: center; font-size: 30rpx; color: #fff;}

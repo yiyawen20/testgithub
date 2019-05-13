@@ -1,0 +1,8 @@
+<!-- 组件模板 -->
+<view class="wrapper">
+  <view class="search_emcee display-box">
+    <view class="flex"><input type="number" value="{{msg}}" focus="{{inputFocus}}" class="input" bindinput="inputValue"></input></view>
+    <view><button class="btn" bindtap="goRoom">搜索</button></view>
+  </view>
+  <slot name="searchEmcee"></slot>
+</view>

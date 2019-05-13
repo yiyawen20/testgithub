@@ -1,0 +1,21 @@
+<!--phoneBind.wxml-->
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...user}}"></template>
+
+<view style='width:750rpx;height:{{windowHigh}}rpx;background-image: url({{cdnfile}}/images/login_bg.png); background-size:100% 100%; -moz-background-size:100% 100%; postion:relative;'>
+  <image src="../images/loginImg.png"  mode='aspectFit'  class='logoImage'></image>
+
+<view class='inputView'>
+  <input type='text' placeholder='请输入手机号' placeholder-style='color: rgb(255, 255, 255);' bindinput='inputPhoneOver' maxlength='11'></input>
+  <input placeholder='请输入验证码' type='text' maxlength='6' confirm-type='done' bindinput='inputsmsCode' placeholder-style='color: rgb(255, 255, 255);'> 
+      </input>
+      <button type='default' bindtap='sendSmsCode' class='smsBtn' id='smsBtnId' disabled='{{disabled}}'>{{sendSmsText}}</button>
+</view>
+
+<view class='phoneloginBtnView'>
+  <button type='default' bindtap='phoneBind'>绑定</button>
+</view>
+</view>

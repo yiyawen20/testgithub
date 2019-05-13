@@ -1,0 +1,35 @@
+<!--pages/popularize/popularize.wxml-->
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<canvas style='width:750rpx;height:100%;' canvas-id='shareCanvas' hidden='{{canvasHidden}}'></canvas>
+
+<!-- <view style='width:0px;height:0px;overflow:hidden;'>
+  <canvas canvas-id='shareCanvas'></canvas>
+</view> -->
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...title}}"></template>
+
+<view class='content'>
+  <image class='background' mode='scaleToFill' src='{{cdnfile}}/images/popularize_page_bg.png'></image>
+
+  <view class='content_info'>
+    <text class='desc'>通过扫描图片二维码邀请来的好友也可\n使你获得现金奖励</text>
+
+    <view class='share_card'>
+      <image class='photo' mode='aspectFill' src='{{imageUrl}}'></image>
+      <image class='refresh' bindtap='refresh' src='../images/share_refresh.png'></image>
+      <view class='user_info'>
+        <image class='avatar' mode='aspectFill' src='{{avatarUrl}}'></image>
+        <text class='nickname'>{{nickname}}</text>
+      </view>
+      <text class='slogan'>人海茫茫，有趣的人相聚于此</text>
+      <image class='code_bg'></image>
+      <image class='code' src='{{codeUrl}}'></image>
+    </view>  
+
+    <button class='save_button' bindtap='saveShareImage'>保存图片</button>
+  </view>
+</view>
+

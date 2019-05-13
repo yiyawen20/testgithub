@@ -1,0 +1,21 @@
+<!--pages/title.wxml-->
+<template name="title">
+  <view class="page_title" bindtouchstart='wStart' bindtouchend='wEnd'>
+    <text>{{nickName}}</text>
+    <block wx:if="{{backbtn}}">
+      <view bindtap="back" class="back_btn">
+        <image src='../images/back.png' class="img_btn"></image>
+      </view>
+    </block>
+    <block wx:if="{{userAvatar}}">
+      <view class="user_avatar" bindtap="toInfo">
+        <image class="avatar_img" mode="aspectFit" src="{{userAvatar}}"></image>
+      </view>
+    </block>
+    <block wx:if="{{idxBack}}">
+      <view class="idx_icon" bindtap="reqimi">
+        <image mode="aspectFit" src="../images/idx_icon.png"></image>
+      </view>
+    </block>
+  </view>  
+</template>

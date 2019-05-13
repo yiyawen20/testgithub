@@ -1,0 +1,12 @@
+<!-- 组件模板 -->
+<view class="wrapper">
+  <view class="common_panel display-box">
+    <view class="mask"></view>
+    <view class="dial_panel">
+      <image class="dial_panel_bg" animation="{{animationData}}" mode="aspectFill" src='{{cdnfile}}/images/dial_bg.png'></image>
+      <image class="dial_panel_close {{dialDisabled}}" mode="aspectFill" src='../images/dial_close.png' bindtap="close"></image>
+      <image class="dial_pointer {{dialDisabled}}" mode="aspectFill" src='../images/dial_pointer.png' bindtap="startDial"></image>
+    </view>
+  </view>
+  <slot name="dial"></slot>
+</view>

@@ -1,0 +1,6 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "my-component": "../dial/dial"
+  }
+}

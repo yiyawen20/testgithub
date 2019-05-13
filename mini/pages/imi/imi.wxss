@@ -1,0 +1,38 @@
+/* pages/imi/imi.wxss */
+@import "../../wxParse/wxParse.wxss";
+@import "../modify/m_imi.wxss";
+page{
+  background-color: #f7f7f7
+}
+
+.chat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+}
+
+.chatcontent {
+  width: auto;
+  color: #585858 !important;
+}
+.chatname{
+  color: #fc5a58 !important;
+}
+.chatgift {
+  color: #CC6699 !important;
+}
+
+.wxParse-span {
+  height: 24px;
+  width: 24px;
+}
+
+.wxParse-img {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.wxParse-p {
+  height: auto;
+}

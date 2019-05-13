@@ -1,0 +1,4 @@
+/* pages/searchemcee/searchemcee.wxss */
+.search_emcee{padding: 12rpx; background-color: #ccc;}
+.input{padding: 10rpx 20rpx; height: 64rpx; line-height: 64rpx; border-radius: 10rpx; border: none; background-color: #fff; vertical-align: top;}
+.btn{width: 160rpx; height: 82rpx; line-height: 84rpx; margin-left: 22rpx; font-size: 32rpx; border-radius: 10rpx; color:#fff; background-color:#179B16; vertical-align: top;}

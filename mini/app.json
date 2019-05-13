@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/popularize/popularize",
+    "pages/share/share",
+    "pages/mine/mine",
+    "pages/withdraw/withdraw",
+    "pages/imi/imi",
+    "pages/activity/activity",
+    "pages/becomeman/becomeman",
+    "pages/login/login",
+    "pages/phoneLogin/phoneLogin",
+    "pages/phoneBind/phoneBind"
+],
+  "window": {
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF"
+  },
+  "sitemapLocation": "sitemap.json"
+}

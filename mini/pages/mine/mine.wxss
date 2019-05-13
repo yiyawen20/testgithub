@@ -1,0 +1,129 @@
+/* pages/mine/mine.wxss */
+@import "../modify/m_mine.wxss";
+page {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  background-color: #f4f4f9;
+}
+
+.top_container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 440rpx;
+}
+
+.top_bg {
+  width: 100%;
+  height: 100%;
+}
+
+.top_content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 44rpx auto 0 auto;
+  border-radius: 90rpx;
+}
+
+.nickname {
+  margin-top: 10rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
+.vip_and_id {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vip {
+  width: 86rpx;
+  height: 30rpx;
+}
+
+.userId {
+  margin-left: 10rpx;
+  color: white;
+  font-size: 24rpx;
+}
+
+.relationship {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+}
+
+.attention,
+.fans {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.fotune image {
+  width: 16rpx;
+  height: 28rpx;
+}
+
+.gold,
+.conch {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: white;
+  padding: 0 28rpx 0 32rpx;
+  align-items: center;
+}
+
+.amount {
+  color: rgb(88, 88, 88);
+  margin-right: 20rpx;
+}
+
+.line {
+  height: 1rpx;
+}
+
+.buttons {
+  margin-top: 184rpx;
+}
+
+.buttons button {
+  margin-top: 56rpx;
+  width: 670rpx;
+  height: 88rpx;
+  display: flex;
+  justify-content: center;
+  border-radius: 44rpx;
+  color: white;
+  background-color: rgb(140, 126, 255);
+  font-size: 30rpx;
+  align-content: center;
+  line-height: 88rpx;
+}

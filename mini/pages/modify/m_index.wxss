@@ -1,0 +1,65 @@
+page{-webkit-overflow-scrolling: touch;}
+
+.show{display: -webkit-box; display: -webkit-flex; display: flex;}
+
+.header_banner image{width: 100%; vertical-align: top;}
+
+.live_list_wrap{padding: 2rpx; box-sizing: border-box;}
+.live_hd{position: relative; z-index: 1; width: 369rpx; height: 369rpx; margin: 2rpx;}
+.live_hd .live_avatar{width: 100%; height: 100%; vertical-align: top;}
+.live_hd .live_avatar_mask{position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%;}
+
+.live_hd .emcee_induce{position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 0 16rpx 10rpx;}
+.live_hd .emcee_induce view{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; font-size: 24rpx;}
+
+.onlive{position: absolute; top: 15rpx; right: 15rpx; z-index: 2; width: 100rpx; height: 40rpx; line-height: 40rpx; border-radius: 40rpx; font-size: 20rpx; text-align: center; border: 2rpx solid rgba(255, 255, 255, .4); color: #fff; background-color: rgba(0, 0, 0, .3);}
+
+.idx_active{position: fixed; bottom: 60rpx; left: 24rpx; z-index: 1; white-space: nowrap;}
+.idx_active image{margin: 0 12rpx;}
+.idx_active_icon{width: 102rpx; height: 102rpx; vertical-align: top;}
+.idx_active .active_an image{width: 0;}
+.idx_active .active_an.act image{
+  /* width: auto; */
+  width:102rpx;
+  transition: width .4s;
+  -moz-transition: width .4s; /* Firefox 4 */
+  -webkit-transition: width .4s; /* Safari 和 Chrome */
+  -o-transition: width .4s; /* Opera */
+}
+
+.attention_wrap{padding: 16rpx 0 10rpx;}
+.attention_title{padding: 0 18rpx; font-size: 22rpx;}
+.attention_scroll{width: 100%;}
+.attention_list{padding: 16rpx 0; height: 178rpx; white-space: nowrap;}
+.attention_list .attention_item{display: inline-block; width: 140rpx; text-align: center; padding: 0 5rpx;}
+.attention_avatar{width: 114rpx; height: 114rpx; vertical-align: top; border-radius: 100%;}
+.atten_name,.atten_watch{line-height: 32rpx; font-size: 22rpx; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.atten_watch{color: #7d7d7d;}
+
+.active_pop{width: 600rpx; height: 954rpx; position: relative; z-index: 1;}
+.active_pop_bg{position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+.sign_label_common{position: absolute; top: 382rpx; z-index: 1; width: 175rpx; height: 28rpx; line-height: 28rpx; padding: 6rpx 0; text-align: center; color: #fff; white-space: nowrap; text-overflow: ellipsis;}
+.sign_day1{left: 22rpx;}
+.sign_day2{left: 214rpx;}
+.sign_day3{left: 406rpx;}
+.sign_day4{left: 22rpx; top: 557rpx;}
+.sign_day5{left: 214rpx; top: 557rpx;}
+.sign_day6{left: 406rpx; top: 557rpx;}
+.sign_day7{width: 555rpx; left: 22rpx; top: 733rpx;}
+.btn_award{position: absolute; top: 800rpx; left: 0; z-index: 1; width: 600rpx; height: 120rpx;}
+.btn_award_bg{position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+.btn_award_button{width: 600rpx; height: 120rpx; line-height: 110rpx; font-size: 36rpx; color: rgb(203,40,35); background-color: transparent;}
+.pop_close{position: absolute; bottom: -153rpx; left: 50%; z-index: -2; width: 156rpx; height: 156rpx; margin: 0 0 0 -78rpx;}
+.icon_ok{position: absolute; top: -130rpx; right: -10rpx; z-index: 1; width: 64rpx; height: 64rpx; display: none;}
+.award_receive .icon_ok{display: inline-block}
+
+.package_wrap{padding: 288rpx 10rpx 0 14rpx; color: #fff;}
+.package_title{line-height: 48rpx; font-size: 36rpx; font-weight: bold; text-align: center;}
+.package_describe{padding: 20rpx 28rpx 0; line-height: 36rpx; font-size: 24rpx;}
+.package_p1{padding: 16rpx 28rpx 36rpx; line-height: 36rpx; font-size: 24rpx;}
+.package_content{width: 576rpx;}
+.package_bag{height: 151rpx; padding: 0 8rpx; text-align: center;overflow: hidden;}
+.package_bag_img{height: 101rpx; padding: 10rpx 0 0; border-radius: 22rpx 22rpx 0 0; background-color: #fff;}
+.package_bag_img image{width: 92rpx; height: 92rpx; vertical-align: top;}
+.package_bag_describe{height: 40rpx; line-height: 40rpx; font-size: 21rpx; border-radius: 0 0 22rpx 22rpx; color: #fff; background-color: rgb(210,80,202); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.btn_award_package{top: 740rpx;}

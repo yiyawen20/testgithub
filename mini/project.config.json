@@ -1,0 +1,97 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.6",
+	"appid": "wx73056135f02f18e2",
+	"projectname": "%E8%89%BE%E7%B1%B3%E7%A7%80%E5%9C%BA",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "share",
+					"pathName": "pages/index/index",
+					"query": "userId=10002024&shareId=1001",
+					"scene": 1007
+				},
+				{
+					"id": 1,
+					"name": "share",
+					"pathName": "pages/imi/imi",
+					"query": "hostId=103787&shareId=1001",
+					"scene": 1044,
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "upETxf3NS3O5SrO6WlduAcR9dN8EWLpa8N4tUKnNnkw@cr4dev",
+						"shareKey": "lUf73lZOxnNWRf0j_1dda99rssPn_C7g6FYvYukDZhtBUlALWwRABHhM30fW2VHO8f7DTmhb05dLo0CddVctJg~~"
+					}
+				},
+				{
+					"id": 2,
+					"name": "imi",
+					"pathName": "pages/imi/imi",
+					"query": "hostId=101226",
+					"scene": 1036,
+					"referrerInfo": {
+						"appId": "wx73056135f02f18e2"
+					}
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "hostId=108005366",
+					"scene": 1036,
+					"referrerInfo": {
+						"appId": "wx73056135f02f18e2"
+					}
+				},
+				{
+					"id": -1,
+					"name": "phoneLogin",
+					"pathName": "pages/phoneLogin/phoneLogin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dial",
+					"pathName": "pages/becomeman/becomeman",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

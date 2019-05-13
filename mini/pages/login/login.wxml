@@ -1,0 +1,16 @@
+<!--login.wxml-->
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...user}}"></template>
+
+<view style='width:750rpx;height:{{windowHigh}}rpx;background-image: url({{cdnfile}}/images/login_bg.png); background-size:100% 100%; -moz-background-size:100% 100%; '>
+<image src="../images/loginImg.png"  mode='aspectFit'  class='logoImage'></image>
+
+<view class='loginBtnView'>
+    <button size='default' type='default' open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">使用微信授权登录</button>
+    <button size='default' type='default' bindtap='toPhoneLogin'>短信验证码登录</button>
+</view>
+
+</view>

@@ -1,0 +1,144 @@
+<!-- yyw -->
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...user}}"></template>
+<search-emcee prop-a="{{searchEmceeDisplay}}" wx:if="{{searchEmceeDisplay}}">
+    <view name="searchEmcee"></view>
+</search-emcee>
+<view wx:if="{{testInfo}}" style='background-color:#ccc;'>{{testInfo}}</view>
+<!-- <view class="header_banner"><image mode='widthFix' src='../images/banner1.jpg'></image></view> -->
+<view class="attention_wrap" wx:if="{{attentionList.length}}">
+  <view class="attention_title">正在直播({{attentionList.length}})</view>
+  <scroll-view scroll-x class="attention_scroll">
+    <view class="attention_list">
+      <block wx:for="{{attentionList}}">
+      <view class="attention_item" bindtap="imiReqRoom" data-tid="{{item.emceeId}}">
+        <view><image mode="scaleToFill" class="attention_avatar" src="{{item.avatar}}"></image></view>
+        <view class="atten_name">{{item.nickName}}</view>
+        <view class="atten_watch">{{item.count}}人在看</view>
+      </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<swiper
+  wx:if="{{imgUrls.length}}"
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  bindchange="bannerHeightChange"
+  style="height:{{imgheights[current]}}rpx;"
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item class="header_banner">
+      <image src="{{item.imgUrl}}" data-url="{{item.linkUrl}}" data-title="{{item.title}}" data-type="{{item.type}}" data-id='{{index}}' mode='widthFix' bindload="bannerImgLoad" bindtap="toActivity" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <slider bindchange="intervalChange" show-value min="500" max="2000" />
+<slider bindchange="durationChange" show-value min="1000" max="10000" /> -->
+<view class="live_list_wrap clear">
+  <block wx:for="{{roomList}}" wx:key="key">
+    <view bindtap="imiReqRoom" data-tid="{{item.userId}}" class="live_hd left">
+      <image mode='aspectFit' class='live_avatar' src="{{item.imageUrl}}"></image>
+      <image mode='aspectFit' class='live_avatar_mask' src='../images/cover-bg.png'></image>
+      <view wx:if="{{item.isLive}}" class="onlive">直播中</view>
+      <view class="display-box emcee_induce">
+        <view class="flex">{{item.roomName}}</view>
+        <view>{{item.userCount}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="page__bd">
+  <view class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</view>
+<view class="idx_active clear">
+  <view class="left"><image mode="aspectFit" src="../images/idx_active_enter.png" class="idx_active_icon" bindtap="openActive"></image></view>
+  <view class="left active_an {{activeList}}"><image mode="aspectFit" src="../images/idx_sign_icon.png" class="idx_active_icon" bindtap="signPanel"></image><image mode="aspectFit" src="../images/idx_bag_icon.png" class="idx_active_icon" bindtap="bagPanel"></image></view>
+</view>
+<!-- 签到 -->
+<view class="common_panel display-box" wx:if="{{signBox}}">
+  <view class="mask"></view>
+  <view class="active_pop">
+    <image mode="aspectFit" class="active_pop_bg" src="{{cdnfile}}/images/sign_welfare_bg.png"></image>
+    <block wx:for="{{signData}}">
+      <view class="sign_label_common sign_day{{index+1}} {{item.receive}}">{{item.title}}<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view>
+    </block>
+    <!-- <view class="sign_label_common sign_day1 award_receive">已领取<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view>
+    <view class="sign_label_common sign_day2 award_receive">已领取<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view>
+    <view class="sign_label_common sign_day3">第三天<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view>
+    <view class="sign_label_common sign_day4">第四天<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view>
+    <view class="sign_label_common sign_day5">第五天<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view>
+    <view class="sign_label_common sign_day6">第六天<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view>
+    <view class="sign_label_common sign_day7">第七天神秘礼包<image mode="aspectFit" src="../images/icon_ok.png" class="icon_ok"></image></view> -->
+    <view class="btn_award">
+      <button class="btn_award_button" bindtap="signReceive">立即领取</button>
+      <image class="btn_award_bg" src="../images/btn_award_normal.png"></image>
+    </view>
+    <image mode="aspectFit" class="pop_close" src="../images/pop_close.png" data-hideid="signBox" bindtap="close"></image>
+  </view>
+</view>
+
+<!-- 我的礼包 -->
+<view class="common_panel display-box" wx:if="{{myPackage}}">
+  <view class="mask"></view>
+  <view class="active_pop">
+    <image mode="aspectFit" class="active_pop_bg" src="{{cdnfile}}/images/my_package_bg.png"></image>
+    <view class="package_wrap">
+      <swiper
+        indicator-dots="{{packageIndicatorDots}}"
+        current="{{packageCurrent}}"
+        indicator-active-color="white"
+        style="height:664rpx;"
+        bindchange="packageSliderChange"
+      >
+        <block wx:for="{{packageData}}">
+          <swiper-item>
+            <view class="package_title">{{item.title}}</view>
+            <view class="package_describe">{{item.desc}}</view>
+            <view class="package_p1">礼包包含：</view>
+            <!--  -->
+            <view class="package_content display-box">
+              <block wx:for="{{item.list}}">
+                <view class="package_bag flex">
+                  <view class="package_bag_img"><image mode="aspectFill" src="{{item.stuffType}}"></image></view>
+                  <view class="package_bag_describe">{{item.stuff_name}}</view>
+                </view>
+              </block>
+              <!-- <view class="package_bag flex">
+                <view class="package_bag_img"><image mode="scaleToFill" src="../images/idx_bag_icon.png"></image></view>
+                <view class="package_bag_describe">1888888金豆</view>
+              </view>
+              <view class="package_bag flex">
+                <view class="package_bag_img"><image mode="scaleToFill" src="../images/idx_sign_icon.png"></image></view>
+                <view class="package_bag_describe">跑车X1</view>
+              </view> -->
+            </view>
+            <!--  -->
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="btn_award btn_award_package">
+      <button class="btn_award_button" bindtap="packageReceive">立即领取</button>
+      <image class="btn_award_bg" src="../images/btn_award_normal.png"></image>
+    </view>
+    <!-- <image mode="aspectFit" class="pop_close" src="../images/pop_close.png" data-hideid="myPackage" bindtap="close"></image> -->
+  </view>
+</view>
+
+<!-- 暂时没有礼包 -->
+<view class="common_panel display-box" wx:if="{{noPackage}}">
+  <view class="mask"></view>
+  <view class="active_pop">
+    <image mode="aspectFit" class="active_pop_bg" src="{{cdnfile}}/images/no_package_bg.png"></image>
+    <image mode="aspectFit" class="pop_close" src="../images/pop_close.png" data-hideid="noPackage" bindtap="close"></image>
+  </view>
+</view>

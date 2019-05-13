@@ -1,0 +1,183 @@
+/* pages/haha/haha.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  flex: 1;
+}
+
+.background_page {
+  margin: auto 0 auto 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.content_info {
+  width: 100%;
+  height: 1210rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto auto;
+}
+
+.share_list_container {
+  margin: 308rpx auto 0 auto;
+  width: 436rpx;
+  height: 484rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 14rpx 0;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.share_item {
+  margin: 16rpx 0;
+}
+
+.share_item_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.share_item_content .left {
+  width: 320rpx;
+  /* border: solid red 1rpx; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.share_item_content .avatar {
+  width: 62rpx;
+  height: 62rpx;
+  border-radius: 31rpx;
+}
+.share_item_content .userName {
+  margin-left: 20rpx;
+  width: 170rpx;
+  color: white;
+}
+.share_item_content .time {
+  width: 100rpx;
+  color: white;
+}
+
+.share_item_content .reward {
+  color: rgb(255, 253, 104);
+  position: relative;
+  right: 0;
+}
+
+.line {
+  position: relative;
+  left: 78rpx;
+  bottom: 5rpx;
+  width: 342rpx;
+  height: 2rpx;
+  top: 0rpx;
+  right: 0rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.rewards {
+  width: 430rpx;
+  height: 90rpx;
+  margin: 32rpx auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: green 10rpx solid; */
+}
+
+.withdraw,
+.lottery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.desc {
+  color: white;
+}
+
+.amount {
+  margin-left: 15rpx;
+  color: rgb(0, 255, 255);
+}
+
+.rewards button {
+  display: flex;
+  width: 94rpx;
+  height: 38rpx;
+  align-items: center;
+  border-radius: 19rpx;
+  justify-content: center;
+  margin: 0;
+  font-size: 24rpx;
+}
+
+.withdraw button {
+  color: rgb(233, 84, 166);
+  background-color: rgb(255, 253, 104);
+}
+
+.lottery button {
+  color: white;
+  background-color: rgb(1, 209, 196);
+}
+
+
+.share_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 544rpx;
+  height: 88rpx;
+  margin: 120rpx auto 0 auto;
+  font-size: 30rpx;
+  /* border: red 1rpx solid; */
+}
+
+
+.share_buttons button {
+  display: flex;
+  border-radius: 44rpx;
+  width: 246rpx;
+  margin: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(38, 91, 166);
+  font-size: 30rpx;
+  align-items: center;
+  justify-content: center;
+}
+

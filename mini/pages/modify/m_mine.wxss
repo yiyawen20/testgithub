@@ -1,0 +1,3 @@
+.attention_fans_wrap{position: absolute; bottom: 0; left: 0; z-index: 1; width: 100%; height: 80rpx; line-height: 30rpx; font-size: 24rpx; text-align: center; color: #fff;}
+.attention_fans_wrap .flex{padding: 10rpx 0; white-space: nowrap; overflow: hidden; background-color: rgba(255, 255, 255, .2);}
+.attention_fans_wrap .flex:last-child{margin-left: 1rpx;}

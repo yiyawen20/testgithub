@@ -1,0 +1,25 @@
+/* pages/dial/dial.wxss */
+.display-box{display: -webkit-box; display: -webkit-flex; display: flex;}
+.flex{-webkit-box-flex:1; -webkit-flex:1; flex:1;}
+.common_panel{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.mask{position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .4);}
+
+.dial_panel{position: relative; z-index: 1; width: 750rpx; height: 750rpx;}
+.dial_panel_bg{position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+.dial_panel_close{position: absolute; top: 80rpx; right: 80rpx; z-index: 1; width: 60rpx; height: 60rpx;}
+.dial_pointer{position: absolute; top: 50%; left: 50%; z-index: 1; width: 314rpx; height: 314rpx; margin: -148rpx 0 0 -157rpx;}
+
+.dial_disabled{pointer-events: none;}

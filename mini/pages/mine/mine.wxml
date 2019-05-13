@@ -1,0 +1,80 @@
+<!--pages/mine/mine.wxml-->
+<import src="../title/title.wxml"/>
+<import src="../adapter/adapter.wxml"/>
+
+<template is="statusBarTop" data="{{...judge}}"></template>
+<template is="title" data="{{...title}}"></template>
+
+<view class='content'>
+
+  <view class='top_container'>
+    <image class='top_bg' mode='aspectFill' src='{{cdnfile}}/images/top_horizontal_bg.png'></image>
+    <view class='top_content' wx:if="{{userInfo}}">
+      <image class='avatar' wx:if="{{userInfo.avatar}}" src='{{userInfo.avatar}}'></image>
+      <text class='nickname'>{{userInfo.nickname}}</text>
+      <view class='vip_and_id'>
+        <image class='vip' wx:if="{{userInfo.vip}}" src='{{userInfo.vip}}'></image>
+        <text class='userId'>{{userInfo.userId}}</text>
+      </view>
+      <!-- <view class='relationship'>
+        <view class='attention'>
+          <text>我关注的</text>
+          <text>{{userInfo.attention}}</text>
+        </view>
+        <view class='fans'>
+          <text>我的粉丝</text>
+          <text>{{userInfo.fans}}</text>
+        </view>
+      </view> -->
+
+      <!-- yyw -->
+      <view class="attention_fans_wrap display-box">
+        <view class="flex">
+          <view><text>我关注的</text></view>
+          <view><text>{{userInfo.attention}}</text></view>
+        </view>
+        <view class="flex">
+          <view><text>我的粉丝</text></view>
+          <view><text>{{userInfo.fans}}</text></view>
+        </view>
+      </view>
+
+    </view> 
+  </view>
+
+  <view class='fotune' wx:if="{{userInfo}}">
+    <view class='gold'>
+      <text>金豆</text>
+      <view>
+        <text class='amount'>{{userInfo.goldAmount}}</text>
+        <!-- <image src='../images/arrow_right.png'></image> -->
+      </view> 
+    </view>
+    <view class='line'></view>
+    <view class='conch'>
+      <text>贝壳</text>
+      <view>
+        <text class='amount'>{{userInfo.conchAmount}}</text>
+        <!-- <image src='../images/arrow_right.png'></image> -->
+      </view>   
+    </view>
+  </view>
+
+  <view class='buttons'>
+    <button bindtap='startApp' wx:if="{{audit}}">启动/下载APP，开启更多功能</button>
+    <button bindtap='logout' wx:if="{{userInfo.userId}}">退出登录</button>
+  </view>
+  
+</view>
+
+<cover-view class="content_panel display-box" wx:if="{{openAppPanel}}">
+  <cover-view class="mask"></cover-view>
+  <cover-view class="content_main">
+    <cover-view class="header_close"><cover-image class="close_btn" src="../images/close.png" data-hideid="openAppPanel" bindtap="close"></cover-image></cover-view>
+    <cover-view class="content_massage">若你尚未安装艾米直播APP，请点击“进入下载”,并回复数字“1”</cover-view>
+    <cover-view class="content_sub display-box">
+      <cover-view class="flex lbtn"><button class="p_btn" plain="false" hover-class="none" open-type="contact" show-message-card="true" send-message-path="pages/mine/mine"  send-message-img="https://cdnfile.imifun.com/www/ivp/imi_mini/images/download_app.png">进入下载</button></cover-view>
+      <cover-view class="flex rbtn"><button wx:if="{{isOpenApp}}" class="p_btn" open-type="launchApp" app-parameter="wechat" binderror="launchAppError">启动APP</button><button wx:else class="p_btn" open-type="contact" show-message-card="true" send-message-path="pages/mine/mine"  send-message-img="https://cdnfile.imifun.com/www/ivp/imi_mini/images/download_app.png">启动APP</button></cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
