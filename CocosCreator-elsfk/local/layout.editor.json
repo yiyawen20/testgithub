@@ -1,0 +1,110 @@
+{
+  "version": "1.1.1",
+  "windows": {
+    "main": {
+      "main": true,
+      "url": "app://editor/index.html",
+      "windowType": "dockable",
+      "x": -8,
+      "y": -8,
+      "width": 1936,
+      "height": 1056,
+      "layout": {
+        "children": [
+          {
+            "children": [
+              {
+                "active": 0,
+                "children": [
+                  "hierarchy"
+                ],
+                "height": 441.171875,
+                "type": "panel",
+                "width": 365.953125
+              },
+              {
+                "active": 0,
+                "children": [
+                  "assets"
+                ],
+                "height": 494.828125,
+                "type": "panel",
+                "width": 365.953125
+              }
+            ],
+            "height": 939,
+            "type": "dock-v",
+            "width": 365.953125
+          },
+          {
+            "children": [
+              {
+                "active": 0,
+                "children": [
+                  "scene"
+                ],
+                "height": 641.5,
+                "type": "panel",
+                "width": 913.125
+              },
+              {
+                "active": 0,
+                "children": [
+                  "console",
+                  "timeline"
+                ],
+                "height": 294.484375,
+                "type": "panel",
+                "width": 913.125
+              }
+            ],
+            "height": 939,
+            "type": "dock-v",
+            "width": 913.125
+          },
+          {
+            "active": 1,
+            "children": [
+              "inspector",
+              "cocos-services"
+            ],
+            "height": 939,
+            "type": "panel",
+            "width": 634.921875
+          }
+        ],
+        "type": "dock-h"
+      },
+      "panels": [
+        "hierarchy",
+        "assets",
+        "scene",
+        "console",
+        "timeline",
+        "inspector",
+        "cocos-services"
+      ]
+    },
+    "worker": {}
+  },
+  "panels": {
+    "project-settings": {
+      "x": 0,
+      "y": 0,
+      "width": 1680,
+      "height": 1050
+    },
+    "builder": {
+      "x": 590,
+      "y": 175,
+      "width": 654,
+      "height": 722
+    }
+  },
+  "panelLabelWidth": {
+    "inspector": null,
+    "builder": null
+  },
+  "panelLabelWidth.inspector": null,
+  "panelLabelWidth.builder": null
+}

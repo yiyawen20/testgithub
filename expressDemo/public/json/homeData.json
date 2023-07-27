@@ -1,0 +1,52 @@
+{
+    "emceeList": [
+        {
+            "avatar": "images/avatar1.png",
+            "name": "萌萌酱",
+            "hobby": "喜欢健身",
+            "old": "26岁",
+            "islive": 1,
+            "online": 1
+        },
+        {
+            "avatar": "images/avatar2.png",
+            "name": "靖姗",
+            "hobby": "爱好逛街",
+            "old": "28岁",
+            "islive": 1,
+            "online": 1
+        },
+        {
+            "avatar": "images/avatar3.png",
+            "name": "可馨",
+            "hobby": "喜欢电影",
+            "old": "29岁",
+            "islive": 1,
+            "online": 1
+        },
+        {
+            "avatar": "images/avatar4.png",
+            "name": "嫣然",
+            "hobby": "喜欢追剧",
+            "old": "27岁",
+            "islive": 1,
+            "online": 1
+        },
+        {
+            "avatar": "images/avatar5.png",
+            "name": "丽颖",
+            "hobby": "爱好下厨",
+            "old": "33岁",
+            "islive": 1,
+            "online": 1
+        },
+        {
+            "avatar": "images/avatar6.png",
+            "name": "楚欣",
+            "hobby": "爱好旅游",
+            "old": "25岁",
+            "islive": 1,
+            "online": 1
+        }
+    ]
+}
